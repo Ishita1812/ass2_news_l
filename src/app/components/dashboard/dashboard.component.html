@@ -1,0 +1,36 @@
+<div class="container" style="width: 80%; margin: auto;">
+    <h2>News Highlights</h2>
+    <ng-container *ngFor="let news of News">
+        <div class="news-container">
+            <div class="news-card">
+                <div>
+                    <img [src]="news.url" style="width:100%; height:100px;">
+                </div>
+                <div class="card-body">
+                <p class="card-text"><b> {{news.title}}</b></p>
+                <p class="card-text"> {{news.content}}</p>
+                </div>
+                <div class="news-buttons">
+                    <button class="btn btn-read" (click)="onClick()">Read Later</button>
+                    <button class="btn btn-detail" routerLink = "/card/{{news.id}}">Details</button>
+                </div>
+            </div>
+        </div>  
+    </ng-container>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
